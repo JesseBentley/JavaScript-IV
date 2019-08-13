@@ -3,13 +3,12 @@ class Person{
     constructor(bio){
         this.name = bio.name;
         this.age = bio.age;
-        this.location = bio.location;
         this.gender = bio.gender;
     }
 }
 
 Person.prototype.speak = function(){
-    return `Hello my name is ${this.name}, a am from ${this.location}`
+    return `Hello my name is ${this.name}, and I am ${this.age}`
 }
 
 class Instrcutor extends Person {
@@ -69,3 +68,28 @@ Student.prototype.grd = function () {
     }
 }
 
+const pave = new Instrcutor({
+    name: `Pace`,
+    age: `??`,
+    gender: `make`
+})
+
+const javier = new TeamLeader({
+    name: `Javier`,
+    age: `??`,
+    gender: `Male`,
+    favLanguage: `JavaScript`,
+    framework: `React.js`
+})
+
+const jesse = new Student({
+    name: `Jesse`,
+    age: `29`,
+    gender: `Male`,
+    favLang: `Python`,
+    framework: `.NET`
+})
+
+jesse.grd();
+javier.favLang();
+pace.demo();
