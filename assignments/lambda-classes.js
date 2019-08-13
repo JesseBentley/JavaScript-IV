@@ -7,3 +7,8 @@ class Person{
         this.gender = bio.gender;
     }
 }
+
+Person.prototype.speak = function(){
+    return `Hello my name is ${this.name}, a am from ${this.location}`
+}
+
