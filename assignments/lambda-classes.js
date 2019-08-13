@@ -43,3 +43,29 @@ TeamLeader.prototype.language = function(){
 TeamLeader.prototype.fram = function(){
     console.log(`My favorite framework is ${this.framework}`)
 }
+
+class Student extends Person {
+    constructor(likes){
+        super(likes);
+        this.favLang = likes.favLang;
+        this.framework = likes.framework;
+        this.grade = likes.grade;
+    }
+}
+
+Student.prototype.lang = function(){
+    console.log(`${this.name} loves programming in ${this.favLang}`)
+}
+
+Student.prototype.framework = function (){
+    console.log(`${this.name} loves to use ${this.framework}`)
+}
+
+Student.prototype.grd = function () {
+    if(this.grae > 70){
+        console.log(`You're passing!`)
+    }else{
+        console.log(`Get gud`)
+    }
+}
+
