@@ -12,3 +12,34 @@ Person.prototype.speak = function(){
     return `Hello my name is ${this.name}, a am from ${this.location}`
 }
 
+class Instrcutor extends Person {
+    constructor(characteristics){
+        super(characteristics);
+        this.specialty = characteristics.specialty;
+        this.favLanguage = characteristics.favLanguage;
+        this.sectionTaught = characteristics.sectionTaught;
+    }
+}
+
+Instrcutor.prototype.grade = function (){
+    console.log(Math.random() - student.grade);
+}
+
+Instrcutor.prototype.demo = function (){
+    console.log(`I teach ${this.sectionTaught}`)
+}
+
+class TeamLeader extends Instructor {
+    constructor (skills){
+        super(skills);
+        this.favLanguage = skills.favLanguage;
+        this.framework = skills.framework
+    }   
+}
+
+TeamLeader.prototype.language = function(){
+    console.log(`My favorite language is ${this.favLanguage}`)
+}
+TeamLeader.prototype.fram = function(){
+    console.log(`My favorite framework is ${this.framework}`)
+}
